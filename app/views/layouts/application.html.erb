@@ -12,10 +12,18 @@
   </head>
 
   <body>
+    <nav class="navbar-lewagon">
+      <a class="navbar-brand" href="#">
+    <%= image_tag "logo.png", alt: "Le Wagon"%>
+    Cocktail database
+      </a>
+    </nav>
+    <div class="container">
     <%= yield %>
     <%= javascript_include_tag "application" %>
     <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>
     <!-- from app/javascript/packs/application.js -->
+    </div>
   </body>
 </html>

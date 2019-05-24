@@ -65,3 +65,9 @@ gem 'simple_form'
 # We don't want to share those secret keys on Github, we can use the dotenv gem for security.
 gem 'dotenv-rails', groups: [:development, :test]
 
+# To upload images
+gem 'cloudinary', '~> 1.9.1'
+
+# It's a gem to upload files associated to Models.
+gem 'carrierwave', '~> 1.2'
+

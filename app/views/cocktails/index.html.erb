@@ -1,24 +1,17 @@
 <!-- Image and text -->
-<nav class="navbar-lewagon">
-  <a class="navbar-brand" href="#">
-    <%= image_tag "logo.png", alt: "Le Wagon"%>
-    Cocktail database
-  </a>
-</nav>
 
-
-
-
-<div class=""></div>
 <h1>Cocktails</h1>
-  <ul class="list-group">
-    <% @cocktails.each do |cocktail| %>
-    <li class="list-group-item">
-      <%= cocktail["name"] %>.
-      <%= link_to "Details", cocktail_path(cocktail["id"]) %>
-      <% end %>
-    </li>
-  </ul>
-</<div>
 
 <%= link_to "Add new cocktail", new_cocktail_path, class:"btn btn-primary" %>
+
+<div class="card-group">
+  <% @cocktails.each do |cocktail| %>
+  <div class="card" style="width: 18rem;">
+    <%= cl_image_tag cocktail.photo, class: "card-img-top"%>
+    <div class="card-body">
+      <h5 class="card-title"><%= cocktail["name"] %></h5>
+      <%= link_to "Details", cocktail_path(cocktail["id"]), class: "btn btn-dark" %>
+    </div>
+  </div>
+  <% end %>
+</div>
