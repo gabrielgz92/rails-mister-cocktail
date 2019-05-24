@@ -1,0 +1,24 @@
+<!-- Image and text -->
+<nav class="navbar-lewagon">
+  <a class="navbar-brand" href="#">
+    <%= image_tag "logo.png", alt: "Le Wagon"%>
+    Cocktail database
+  </a>
+</nav>
+
+
+
+
+<div class=""></div>
+<h1>Cocktails</h1>
+  <ul class="list-group">
+    <% @cocktails.each do |cocktail| %>
+    <li class="list-group-item">
+      <%= cocktail["name"] %>.
+      <%= link_to "Details", cocktail_path(cocktail["id"]) %>
+      <% end %>
+    </li>
+  </ul>
+</<div>
+
+<%= link_to "Add new cocktail", new_cocktail_path, class:"btn btn-primary" %>
